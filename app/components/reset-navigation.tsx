@@ -2,11 +2,9 @@
 import { useEffect } from "react";
 
 export function ResetNavigation() {
-	useEffect(() => {
-		// Clear the flag when user returns to home page
-		// So animation triggers again on next subpage visit
-		sessionStorage.removeItem("hasVisitedSubpage");
-	}, []);
+  useEffect(() => {
+    sessionStorage.removeItem("hasVisitedSubpage");
+  }, []);
 
-	return null;
+  return null;
 }

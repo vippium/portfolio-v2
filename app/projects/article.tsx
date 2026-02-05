@@ -20,9 +20,6 @@ export const Article: React.FC<Props> = ({ project }) => {
 
   useEffect(() => {
     if (pRef.current) {
-      // Check if content height exceeds the max collapsed limit
-      // text-sm line-height is 1.25rem. 4 lines ~ 80px (5rem).
-      // We check if scrollHeight is greater than ~80px.
       setIsOverflowing(pRef.current.scrollHeight > 80);
     }
   }, [project.description]);
