@@ -3,8 +3,8 @@
 import { useEffect, useState, useCallback, useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 
-const NORMAL_SIZE = 20;
-const SHRINK_SIZE = 35;
+const NORMAL_SIZE = 30;
+const SHRINK_SIZE = 50;
 
 export function FollowCursor() {
   const [isVisible, setIsVisible] = useState(false);
@@ -18,19 +18,19 @@ export function FollowCursor() {
   const cursorSize = useMotionValue(NORMAL_SIZE);
 
   const smoothX = useSpring(cursorX, {
-    stiffness: 1500,
-    damping: 80,
-    mass: 0.3,
+    stiffness: 4000,
+    damping: 60,
+    mass: 0.05,
   });
   const smoothY = useSpring(cursorY, {
-    stiffness: 1500,
-    damping: 80,
-    mass: 0.3,
+    stiffness: 2000,
+    damping: 85,
+    mass: 0.2,
   });
   const smoothSize = useSpring(cursorSize, {
-    stiffness: 800,
-    damping: 60,
-    mass: 0.4,
+    stiffness: 1200,
+    damping: 70,
+    mass: 0.3,
   });
 
   const handleMouseMove = useCallback(

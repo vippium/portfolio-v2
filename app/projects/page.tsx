@@ -24,7 +24,6 @@ export default async function ProjectsPage() {
       new Date(a.date ?? Number.POSITIVE_INFINITY).getTime(),
   );
 
-  // Explicitly set bookstore as featured project
   const featured =
     published.find((p) => p.slug === "bookstore-management-system") ||
     published[0];
@@ -43,8 +42,7 @@ export default async function ProjectsPage() {
               Projects
             </h2>
             <p className="mt-4 text-zinc-400">
-              All projects are from my own time, during my initial learning
-              phase.
+              The projects are from my own time, during my initial learning phase.
             </p>
           </div>
           <div className="w-full h-px bg-zinc-800" />
