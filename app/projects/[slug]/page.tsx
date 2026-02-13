@@ -12,13 +12,11 @@ type Props = {
   };
 };
 
-
-
 export async function generateStaticParams(): Promise<Props["params"][]> {
   const allowed = new Set([
     "bookstore-management-system",
     "crm-software-project",
-    "erp-management-system",
+    "vblocktube",
   ]);
   return allProjects
     .filter((p) => p.published && allowed.has(p.slug))
@@ -30,15 +28,15 @@ export default async function PostPage({ params }: Props) {
   const allowed = new Set([
     "bookstore-management-system",
     "crm-software-project",
-    "erp-management-system",
+    "vblocktube",
   ]);
-  const project = allProjects.find((project) => project.slug === slug && allowed.has(project.slug));
+  const project = allProjects.find(
+    (project) => project.slug === slug && allowed.has(project.slug),
+  );
 
   if (!project) {
     notFound();
   }
-
-
 
   return (
     <div className="bg-black min-h-screen">

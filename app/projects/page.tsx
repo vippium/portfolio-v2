@@ -9,7 +9,7 @@ import { ProjectsTransition } from "./transition";
 const allowedSlugs = new Set([
   "bookstore-management-system",
   "crm-software-project",
-  "erp-management-system",
+  "vblocktube",
 ]);
 
 export const revalidate = 60;
