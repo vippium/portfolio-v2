@@ -42,7 +42,8 @@ export default async function ProjectsPage() {
               Projects
             </h2>
             <p className="mt-4 text-zinc-400">
-              The projects are from my own time, during my initial learning phase.
+              The projects are from my own time, during my initial learning
+              phase.
             </p>
           </div>
           <div className="w-full h-px bg-zinc-800" />
