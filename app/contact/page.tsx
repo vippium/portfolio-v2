@@ -32,14 +32,14 @@ export default function Example() {
     <div className=" bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0">
       <Navigation />
       <PageTransition>
-        <div className="container flex items-center justify-center min-h-screen px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 mx-auto">
-          <div className="grid w-full grid-cols-1 gap-8 mx-auto mt-20 sm:mt-24 md:mt-32 lg:mt-0 sm:grid-cols-3 lg:gap-16">
+        <div className="container flex items-center justify-center min-h-screen px-4 sm:px-6 md:px-12 lg:px-16 xl:px-20 mx-auto">
+          <div className="grid w-full grid-cols-1 gap-4 mx-auto mt-12 sm:mt-16 md:mt-24 lg:mt-0 sm:grid-cols-3 lg:gap-12">
             {socials.map((s) => (
               <Card>
                 <Link
                   href={s.href}
                   target="_blank"
-                  className="p-4 relative flex flex-col items-center gap-4 duration-700 group md:gap-8 md:py-24  lg:pb-48  md:p-24"
+                  className="p-3 sm:p-4 relative flex flex-col items-center gap-3 duration-700 group md:gap-6 md:py-16 lg:pb-32 md:p-12"
                 >
                   <span
                     className="absolute w-px h-2/3 bg-gradient-to-b from-zinc-500 via-zinc-500/50 to-transparent"
