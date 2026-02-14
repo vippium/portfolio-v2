@@ -16,6 +16,18 @@ module.exports = {
       typography: {
         DEFAULT: {
           css: {
+            h2: {
+              fontSize: "1.5em",
+              fontWeight: "600",
+            },
+            h3: {
+              fontSize: "1.25em",
+              fontWeight: "600",
+            },
+            h4: {
+              fontSize: "1.1em",
+              fontWeight: "600",
+            },
             "code::before": {
               content: '""',
             },

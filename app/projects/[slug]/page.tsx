@@ -44,7 +44,7 @@ export default async function PostPage({ params }: Props) {
       <Header project={project} />
 
       <PageAnimation>
-        <article className="px-4 sm:px-6 lg:px-8 py-6 mx-auto prose prose-lg prose-invert prose-zinc prose-quoteless max-w-3xl">
+        <article className="px-4 sm:px-6 lg:px-8 py-6 mx-auto prose prose-sm sm:prose-base md:prose-lg prose-invert prose-zinc prose-quoteless max-w-3xl">
           <Mdx code={project.body.code} />
         </article>
       </PageAnimation>
