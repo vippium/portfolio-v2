@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { allProjects } from "contentlayer/generated";
 import { Mdx } from "@/app/components/mdx";
 import { Header } from "./header";
+import { PageAnimation } from "./page-animation";
 import "./mdx.css";
 
 export const revalidate = 60;
@@ -42,9 +43,11 @@ export default async function PostPage({ params }: Props) {
     <div className="bg-black min-h-screen">
       <Header project={project} />
 
-      <article className="px-4 sm:px-6 lg:px-8 py-12 mx-auto prose prose-lg prose-invert prose-zinc prose-quoteless max-w-3xl">
-        <Mdx code={project.body.code} />
-      </article>
+      <PageAnimation>
+        <article className="px-4 sm:px-6 lg:px-8 py-6 mx-auto prose prose-lg prose-invert prose-zinc prose-quoteless max-w-3xl">
+          <Mdx code={project.body.code} />
+        </article>
+      </PageAnimation>
     </div>
   );
 }

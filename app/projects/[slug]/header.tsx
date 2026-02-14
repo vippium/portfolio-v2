@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 
 type Props = {
   project: {
@@ -47,9 +48,12 @@ export const Header: React.FC<Props> = ({ project }) => {
   }, []);
 
   return (
-    <header
+    <motion.header
       ref={ref}
       className="relative isolate overflow-hidden bg-gradient-to-tl from-black via-zinc-900 to-black"
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div
         className={`fixed inset-x-0 top-0 z-50 backdrop-blur lg:backdrop-blur-none duration-200 border-b lg:bg-transparent ${
@@ -75,7 +79,7 @@ export const Header: React.FC<Props> = ({ project }) => {
           </Link>
         </div>
       </div>
-      <div className="container mx-auto relative isolate overflow-hidden py-16 sm:py-24 lg:py-32 pt-24 sm:pt-24">
+      <div className="container mx-auto relative isolate overflow-hidden py-16 sm:py-20 lg:py-24 pt-24 sm:pt-24 pb-8 sm:pb-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white font-display">
@@ -112,7 +116,7 @@ export const Header: React.FC<Props> = ({ project }) => {
           </div>
 
           {project.title === "Online Bookstore System" && (
-            <div className="mt-4 bg-yellow-900/20 border border-yellow-700/50 px-6 py-4 rounded-2xl max-w-2xl">
+            <div className="mt-8 bg-yellow-900/20 border border-yellow-700/50 px-6 py-4 rounded-lg max-w-2xl">
               <div className="text-center">
                 <div className="flex items-center justify-center gap-5 mb-2">
                   <AlertCircle className="w-5 h-5 text-yellow-500 flex-shrink-0" />
@@ -130,6 +134,6 @@ export const Header: React.FC<Props> = ({ project }) => {
           )}
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 };
