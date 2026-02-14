@@ -58,7 +58,7 @@ export const Article: React.FC<Props> = ({ project }) => {
               onClick={(e) => {
                 if (isOverflowing) {
                   e.preventDefault();
-                  e.stopPropagation(); // Prevent link navigation
+                  e.stopPropagation();
                   setExpanded(!expanded);
                 }
               }}

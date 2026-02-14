@@ -1,6 +1,6 @@
 import "../global.css";
-import { Poppins } from "@next/font/google";
-import LocalFont from "@next/font/local";
+import { Poppins } from "next/font/google";
+import LocalFont from "next/font/local";
 import { Metadata } from "next";
 import { FollowCursor } from "./components/follow-cursor";
 import Particles from "./components/particles";
@@ -10,7 +10,8 @@ export const metadata: Metadata = {
     default: "Vipin Prajapat",
     template: "%s | Vipin Prajapat",
   },
-  description: "React-first Web Developer experienced in building full-stack applications with modern JavaScript and clean architecture.",
+  description:
+    "React-first Web Developer experienced in building full-stack applications with modern JavaScript and clean architecture.",
   metadataBase: new URL("https://vipinprajapat.dev"),
   openGraph: {
     title: "Vipin Prajapat",
@@ -65,14 +66,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={[poppins.variable, calSans.variable].join(" ")}>
-      <head>
-      </head>
+      <head></head>
       <body
-        className={`bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
-          }`}
+        className={`bg-black ${
+          process.env.NODE_ENV === "development" ? "debug-screens" : undefined
+        }`}
       >
         <FollowCursor />
-        <Particles className="fixed inset-0 -z-10" quantity={50} staticity={50} />
+        <Particles
+          className="fixed inset-0 -z-10"
+          quantity={50}
+          staticity={50}
+        />
         {children}
       </body>
     </html>

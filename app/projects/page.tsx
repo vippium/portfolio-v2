@@ -25,11 +25,10 @@ export default async function ProjectsPage() {
   );
 
   const featured =
-    published.find((p) => p.slug === "bookstore-management-system") ||
-    published[0];
+    published.find((p) => p.slug === "vblocktube") || published[0];
   const remaining = published.filter((p) => p.slug !== featured?.slug);
-  const top2 = remaining[0];
-  const top3 = remaining[1];
+  const top2 = remaining[1];
+  const top3 = remaining[0];
   const sorted = remaining.slice(2);
 
   return (
@@ -59,7 +58,7 @@ export default async function ProjectsPage() {
                     <div className="flex lg:flex-col justify-between lg:justify-start gap-2 items-center lg:items-start transition-all duration-500">
                       <h2
                         id="featured-post"
-                        className="z-20 text-3xl font-medium duration-1000 lg:text-4xl text-zinc-200 group-hover:text-white font-display lg:order-2 lg:mt-4 transition-all"
+                        className="z-20 text-xl font-medium duration-1000 md:text-3xl lg:text-4xl text-zinc-200 group-hover:text-white font-display lg:order-2 lg:mt-4 transition-all"
                       >
                         {featured.title}
                       </h2>

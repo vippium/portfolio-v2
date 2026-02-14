@@ -10,6 +10,9 @@ module.exports = {
 
 	theme: {
 		extend: {
+			screens: {
+				md: "778px",
+			},
 			typography: {
 				DEFAULT: {
 					css: {

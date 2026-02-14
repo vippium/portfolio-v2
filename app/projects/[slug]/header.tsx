@@ -1,5 +1,11 @@
 "use client";
-import { ArrowLeft, Eye, Github, ExternalLink } from "lucide-react";
+import {
+  ArrowLeft,
+  Eye,
+  Github,
+  ExternalLink,
+  AlertCircle,
+} from "lucide-react";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 
@@ -104,6 +110,24 @@ export const Header: React.FC<Props> = ({ project }) => {
               ))}
             </div>
           </div>
+
+          {project.title === "Online Bookstore System" && (
+            <div className="mt-4 bg-yellow-900/20 border border-yellow-700/50 px-6 py-4 rounded-2xl max-w-2xl">
+              <div className="text-center">
+                <div className="flex items-center justify-center gap-5 mb-2">
+                  <AlertCircle className="w-5 h-5 text-yellow-500 flex-shrink-0" />
+                  <p className="text-yellow-200 font-semibold">
+                    Free Server Notice
+                  </p>
+                </div>
+                <p className="text-yellow-100/80 text-sm">
+                  This application is hosted on a free server. UI and data
+                  loading may take longer than expected. Please wait patiently
+                  while books and content render.
+                </p>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </header>
