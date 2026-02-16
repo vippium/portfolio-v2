@@ -75,7 +75,7 @@ export default function RootLayout({
         <FollowCursor />
         <Particles
           className="fixed inset-0 -z-10"
-          quantity={50}
+          quantity={150}
           staticity={50}
         />
         {children}
