@@ -29,9 +29,6 @@ importers:
       lucide-react:
         specifier: ^0.284.0
         version: 0.284.0(react@18.3.1)
-      markdown-wasm:
-        specifier: ^1.2.0
-        version: 1.2.0
       next:
         specifier: ^13.5.4
         version: 13.5.11(@opentelemetry/api@1.4.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -47,9 +44,6 @@ importers:
       react-icons:
         specifier: ^5.5.0
         version: 5.5.0(react@18.3.1)
-      react-wrap-balancer:
-        specifier: ^1.1.0
-        version: 1.1.1(react@18.3.1)
       rehype-autolink-headings:
         specifier: ^7.0.0
         version: 7.1.0
@@ -65,9 +59,6 @@ importers:
       shiki:
         specifier: 0.14.7
         version: 0.14.7
-      simple-icons:
-        specifier: ^16.7.0
-        version: 16.7.0
       typescript:
         specifier: ^5.2.2
         version: 5.9.3
@@ -1569,11 +1560,6 @@ packages:
     peerDependencies:
       react: '*'
 
-  react-wrap-balancer@1.1.1:
-    resolution: {integrity: sha512-AB+l7FPRWl6uZ28VcJ8skkwLn2+UC62bjiw8tQUrZPlEWDVnR9MG0lghyn7EyxuJSsFEpht4G+yh2WikEqQ/5Q==}
-    peerDependencies:
-      react: '>=16.8.0 || ^17.0.0 || ^18'
-
   react@18.3.1:
     resolution: {integrity: sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==}
     engines: {node: '>=0.10.0'}
@@ -1661,10 +1647,6 @@ packages:
 
   shiki@0.14.7:
     resolution: {integrity: sha512-dNPAPrxSc87ua2sKJ3H5dQ/6ZaY8RNnaAqK+t0eG7p0Soi2ydiqbGOTaZCqaYvA/uZYfS1LJnemt3Q+mSfcPCg==}
-
-  simple-icons@16.7.0:
-    resolution: {integrity: sha512-2BteuQXu1+/jK5dF8YXe8nwoRG3afwl03bCmgPJLiotllUBU46B+WntXT731Z17oOntfV5eeTI7Q1k7MeOA6eg==}
-    engines: {node: '>=0.12.18'}
 
   sort-keys@5.1.0:
     resolution: {integrity: sha512-aSbHV0DaBcr7u0PVHXzM6NbZNAtrr9sF6+Qfs9UUVG7Ll3jQ6hHi8F/xqIIcn2rvIVbr0v/2zyjSdwSV47AgLQ==}
@@ -2983,7 +2965,8 @@ snapshots:
 
   markdown-table@3.0.4: {}
 
-  markdown-wasm@1.2.0: {}
+  markdown-wasm@1.2.0:
+    optional: true
 
   mdast-util-definitions@5.1.2:
     dependencies:
@@ -3637,10 +3620,6 @@ snapshots:
     dependencies:
       react: 18.3.1
 
-  react-wrap-balancer@1.1.1(react@18.3.1):
-    dependencies:
-      react: 18.3.1
-
   react@18.3.1:
     dependencies:
       loose-envify: 1.4.0
@@ -3782,8 +3761,6 @@ snapshots:
       jsonc-parser: 3.3.1
       vscode-oniguruma: 1.7.0
       vscode-textmate: 8.0.0
-
-  simple-icons@16.7.0: {}
 
   sort-keys@5.1.0:
     dependencies:
