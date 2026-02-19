@@ -1,9 +1,15 @@
 <div align="center">
-    <h1 align="center">Vipin Prajapat - Portfolio</h1>
+    <img src="https://ishan-rest.vercel.app/svg/banner/normal/Vipin-Prajapat" alt="Vipin Prajapat" width="100%"/>
 
 Personal portfolio website showcasing my projects and experience as a Full-Stack Web Developer.
 
-Built with [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/), [Framer Motion](https://www.framer.com/motion/), [Contentlayer](https://www.contentlayer.dev/), and deployed on [Vercel](https://vercel.com/).
+**Built with:**
+
+- [Next.js](https://nextjs.org/) - React framework for production
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [Framer Motion](https://www.framer.com/motion/) - Animation library
+- [Contentlayer](https://www.contentlayer.dev/) - Content SDK for managing MDX
+- [Vercel](https://vercel.com/) - Deployment platform
 
 </div>
 
