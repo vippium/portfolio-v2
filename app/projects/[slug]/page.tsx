@@ -3,6 +3,7 @@ import { allProjects } from "contentlayer/generated";
 import { Mdx } from "@/app/components/mdx";
 import { Header } from "./header";
 import { PageAnimation } from "./page-animation";
+import { ScrollProgress } from "./scroll-progress";
 import "./mdx.css";
 
 export const revalidate = 60;
@@ -41,6 +42,7 @@ export default async function PostPage({ params }: Props) {
 
   return (
     <div className="bg-black min-h-screen">
+      <ScrollProgress />
       <Header project={project} />
 
       <PageAnimation>
