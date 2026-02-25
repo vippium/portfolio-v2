@@ -9,12 +9,12 @@ import "./mdx.css";
 export const revalidate = 60;
 
 type Props = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
-export async function generateStaticParams(): Promise<Props["params"][]> {
+export async function generateStaticParams() {
   const allowed = new Set([
     "bookstore-management-system",
     "crm-software-project",
@@ -26,7 +26,7 @@ export async function generateStaticParams(): Promise<Props["params"][]> {
 }
 
 export default async function PostPage({ params }: Props) {
-  const slug = params?.slug;
+  const { slug } = await params;
   const allowed = new Set([
     "bookstore-management-system",
     "crm-software-project",
